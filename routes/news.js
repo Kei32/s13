@@ -31,7 +31,11 @@ router.get('/post-:postId/', function(req, res, next) {
         else{
         	posts.forEach(function(element, index) {
     			if (element.id == id){
+                    var lol = "привет";
+                    lol = element.header.replace('брата','*');
+                    console.log(lol);
     				res.render('post', { title: element.header, post: element});
+
     			}
 			});
 		}
